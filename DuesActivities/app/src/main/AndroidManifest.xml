@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.duesactivities">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+
+        <!-- Activity Principal -->
+        <activity
+            android:name="com.example.duesactivities.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Activity Filla - IMPORTANT: Cal registrar-la aquí! -->
+        <activity
+            android:name="com.example.duesactivities.ChildActivity"
+            android:label="Activity Filla"
+            android:parentActivityName="com.example.duesactivities.MainActivity">
+            <!-- Opcional: afegeix navegació cap enrere -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.duesactivities.MainActivity" />
+        </activity>
+
+    </application>
+
+</manifest>
